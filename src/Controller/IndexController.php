@@ -10,7 +10,7 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class IndexController extends AbstractController
 {
-    #[Route('/index', name: 'app_index')]
+    #[Route('/', name: 'app_index')]
     public function afficheList(ManagerRegistry $doctrine): Response
     {
         $produitsRepository = $doctrine->getRepository(Produits::class);
